@@ -18,12 +18,11 @@ This project is a demo website for a book store, developed using React. Here I h
 
 ## `Live Demo:`
 
-[math_magician](https://mathmagician.herokuapp.com/)
+[Book-Store](ww)
 
 ## `Screen-shots:`
-<img src="assets/img/ss1.png">
-<img src="assets/img/ss2.png">
-<img src="assets/img/ss3.png">
+
+Screenshot
 
 # Getting Started:
 
@@ -58,9 +57,9 @@ To get this project up and running locally, "npm install" is needed to be run in
 👤 **Jelil Faisal Abudu**
 
 - Github: [@JelilFaisalAbudu](https://github.com/JelilFaisalAbudu)
-- Linkedin: 
 - E-mail: <a href="mailto:abudujelilfaisal@gmail.com?subject=Hello Faisal!">Email</a>  
-- Twitter: 
+- Twitter: [@JelilAbudu](https://twitter.com/jelilabudu)
+- Linkedin: [jelilfaisalabudu](https://linkedin.com/in/jelilfaisalabudu)
 
 
 ## `Show your support:`

@@ -6,7 +6,7 @@ import BookForm from './BooksForm';
 const App = () => (
   <div>
     <BookList />
-    { /* <BookForm /> */ }
+    <BookForm />
   </div>
 );
 export default App;

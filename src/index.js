@@ -7,7 +7,28 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import reducer from './reducers/index';
 
-const store = createStore(reducer);
+const initialState = [
+  {
+    ID: 1,
+    title: 'Title 1',
+    category: 'Cat-1',
+
+  },
+  {
+    ID: 2,
+    title: 'Title 1',
+    category: 'Cat-1',
+
+  },
+  {
+    ID: 3,
+    title: 'Title 1',
+    category: 'Cat-1',
+
+  },
+];
+
+const store = createStore(reducer(initialState));
 
 ReactDOM.render(
   <Provider store={store}>

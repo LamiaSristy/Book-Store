@@ -1,7 +1,6 @@
-/* eslint-disable*/
 import { combineReducers } from 'redux';
-import books from './books';
+import bookReducer from './books';
 
-const reducer = combineReducers({ books });
+const reducer = combineReducers({ bookReducer });
 
 export default reducer;

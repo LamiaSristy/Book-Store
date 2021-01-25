@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Book from './Book';
 
 const mapStateToProp = (state) => ({books: state.books});
 
@@ -9,11 +10,7 @@ const BookList = ({ books }) => {
     const list = [];
     books.forEach(book => {
         list.push(
-            <tr>
-                <td>{book.ID}</td>
-                <td>{book.title}</td>
-                <td>{book.category}</td>
-            </tr>
+            <Book book={book} />
         );
     });
     return(

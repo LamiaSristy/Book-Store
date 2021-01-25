@@ -1,6 +1,18 @@
-import React from 'react';
+/* eslint-disable*/
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createBook } from '../actions/index';
 
-const BookForm = () => {
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (book) => {
+    dispatch(createBook(book));
+  }
+});
+
+const BookForm = ({createBook}) => {
+  const [bookTitleInput, setBookTitleInput] = useState('');
+  const [bookCategoryInput, setBookCategoryInput] = useState('');
   const options = [
     {
       label: 'Action',
@@ -32,21 +44,40 @@ const BookForm = () => {
     },
   ];
 
+  const handleAddBook = () => {
+    createBook({
+      ID: Math.ceil(Math.random() * 100),
+      title: bookTitleInput,
+      category: bookCategoryInput
+    });
+
+    setBookTitleInput('');
+    setBookCategoryInput('');
+  };
+
   return (
     <form>
       <label htmlFor="bookTitle">
         title
-        <input type="text" name="title" value="" />
+        <input type="text" name="title" value={bookTitleInput} onChange={(e) => setBookTitleInput(e.target.value)}/>
       </label>
 
-      <select>
+      <select value={bookCategoryInput}
+      onChange={(e) => setBookCategoryInput(e.target.value)}>
         {options.map(option => (
           <option key={`${option.value}`} value={option.value}>{option.label}</option>
         ))}
       </select>
-      <input type="submit" name="submit" value="Submit" />
+      <button type="button" className="border-2" onClick={handleAddBook}>
+          Create Book
+        </button>
+      {/* <input type="submit" name="submit" value="Submit" /> */}
     </form>
   );
 };
 
-export default BookForm;
+BookForm.propTypes = {
+  createBook: PropTypes.func.isRequired
+};
+
+export default connect(null, mapDispatchToProps)(BookForm);

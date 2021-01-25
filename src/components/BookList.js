@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from './Book';
 
-const mapStateToProp = (state) => ({books: state.books});
+const mapStateToProp = (state) => ({books: state.bookReducer});
 
 const BookList = ({ books }) => {
     const list = [];
     books.forEach(book => {
         list.push(
-            <Book book={book} />
+            <Book key={book.ID} book={book} />
         );
     });
     return(

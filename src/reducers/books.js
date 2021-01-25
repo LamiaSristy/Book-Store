@@ -1,5 +1,5 @@
 /* eslint-disable*/
-import {REMOVE_BOOK, CREATE_BOOK, createBook, removeBook} from '../actions/index';
+import { REMOVE_BOOK, CREATE_BOOK } from '../actions/index';
 
 const books = [
   {
@@ -29,9 +29,10 @@ const bookReducer = (state= books, action) => {
         ...state, action.book
       ];
     case REMOVE_BOOK:
-      return [
-        ...state.slice(0, action.ID), ...state.slice((action.ID + 1))
-      ];
+      return state.filter((book) => book.ID !== action.ID);
+      // return [
+      //   ...state.slice(0, action.ID), ...state.slice((action.ID + 1))
+      // ];
   
     default:
       return state;

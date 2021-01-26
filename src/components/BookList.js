@@ -4,6 +4,16 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from './Book';
 
+
+const mapDispatchToProps = (dispatch) => ({
+  removeBook: (ID) => {
+    dispatch({
+      ID,
+      type: 'REMOVE_BOOK'
+    });
+  }
+});
+
 const mapStateToProp = (state) => ({books: state.bookReducer});
 
 const BookList = ({ books }) => {
@@ -33,4 +43,4 @@ BookList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
-export default connect(mapStateToProp, null)(BookList);
+export default connect(mapStateToProp, mapDispatchToProps)(BookList);

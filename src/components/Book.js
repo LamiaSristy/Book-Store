@@ -1,23 +1,13 @@
-/* eslint-disable*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
-const mapDispatchToProps = (dispatch) => ({
-  removeBook: (ID) => {
-    dispatch({
-      ID,
-      type: 'REMOVE_BOOK'
-    });
-  }
-});
 
 const Book = ({ book, removeBook }) => (
   <tr>
     <td>{book.ID}</td>
     <td>{book.title}</td>
     <td>{book.category}</td>
-    <td>      
+    <td>
       <button type="button" onClick={() => removeBook(book.ID)}>
         Remove
       </button>
@@ -26,12 +16,12 @@ const Book = ({ book, removeBook }) => (
 );
 
 Book.propTypes = {
-  book:{
-  ID: PropTypes.string,
-  title: PropTypes.string,
-  category: PropTypes.string,
-}.isRequired,
-removeBook: PropTypes.func.isRequired
+  book: {
+    ID: PropTypes.string,
+    title: PropTypes.string,
+    category: PropTypes.string,
+  }.isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
-export default connect(null, mapDispatchToProps)( Book);
+export default connect(null, null)(Book);

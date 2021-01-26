@@ -1,7 +1,6 @@
-/* eslint-disable*/
 import '../App.css';
-import BookList from './BookList';
-import BookForm from './BooksForm';
+import BookList from '../containers/BookList';
+import BookForm from '../containers/BooksForm';
 
 const App = () => (
   <div>

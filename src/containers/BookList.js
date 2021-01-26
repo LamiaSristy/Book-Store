@@ -6,9 +6,9 @@ import Book from '../components/Book';
 
 
 const mapDispatchToProps = (dispatch) => ({
-  removeBook: (ID) => {
+  removeBook: (book) => {
     dispatch({
-      ID,
+      ID: book.ID,
       type: 'REMOVE_BOOK'
     });
   }
@@ -18,7 +18,11 @@ const mapStateToProp = (state) => ({books: state.bookReducer});
 
 const BookList = ({ books, removeBook }) => {
 
-  const renderBook = (book) => <Book key={book.ID} book={book} removeBook={removeBook} />;
+  const handleRemoveBook  = (ID) => {
+    removeBook(ID);
+  };
+
+  const renderBook = (book) => <Book key={book.ID} book={book} removeBook={handleRemoveBook} />;
   return (
     <table>
       <thead>

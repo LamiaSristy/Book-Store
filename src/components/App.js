@@ -1,4 +1,3 @@
-/* eslint-disable*/
 import '../App.css';
 import BookList from './BookList';
 import BookForm from './BooksForm';

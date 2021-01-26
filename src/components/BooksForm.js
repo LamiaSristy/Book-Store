@@ -1,16 +1,15 @@
-/* eslint-disable*/
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 
-const mapDispatchToProps = (dispatch) => ({
-  createBook: (book) => {
+const mapDispatchToProps = dispatch => ({
+  createBook: book => {
     dispatch(createBook(book));
-  }
+  },
 });
 
-const BookForm = ({createBook}) => {
+const BookForm = ({ createBook }) => {
   const [bookTitleInput, setBookTitleInput] = useState('');
   const [bookCategoryInput, setBookCategoryInput] = useState('');
   const options = [
@@ -48,7 +47,7 @@ const BookForm = ({createBook}) => {
     createBook({
       ID: Math.ceil(Math.random() * 100),
       title: bookTitleInput,
-      category: bookCategoryInput
+      category: bookCategoryInput,
     });
 
     setBookTitleInput('');
@@ -59,25 +58,27 @@ const BookForm = ({createBook}) => {
     <form>
       <label htmlFor="bookTitle">
         title
-        <input type="text" name="title" value={bookTitleInput} onChange={(e) => setBookTitleInput(e.target.value)}/>
+        <input type="text" name="title" value={bookTitleInput} onChange={e => setBookTitleInput(e.target.value)} />
       </label>
 
-      <select value={bookCategoryInput}
-      onChange={(e) => setBookCategoryInput(e.target.value)}>
+      <select
+        value={bookCategoryInput}
+        onChange={e => setBookCategoryInput(e.target.value)}
+      >
         {options.map(option => (
           <option key={`${option.value}`} value={option.value}>{option.label}</option>
         ))}
       </select>
       <button type="button" className="border-2" onClick={handleAddBook}>
-          Create Book
-        </button>
+        Create Book
+      </button>
       {/* <input type="submit" name="submit" value="Submit" /> */}
     </form>
   );
 };
 
 BookForm.propTypes = {
-  createBook: PropTypes.func.isRequired
+  createBook: PropTypes.func.isRequired,
 };
 
 export default connect(null, mapDispatchToProps)(BookForm);

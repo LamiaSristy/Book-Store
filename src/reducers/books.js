@@ -1,4 +1,3 @@
-/* eslint-disable*/
 import { REMOVE_BOOK, CREATE_BOOK } from '../actions/index';
 
 const books = [
@@ -22,18 +21,18 @@ const books = [
   },
 ];
 
-const bookReducer = (state= books, action) => {
+const bookReducer = (state = books, action) => {
   switch (action.type) {
     case CREATE_BOOK:
       return [
-        ...state, action.book
+        ...state, action.book,
       ];
     case REMOVE_BOOK:
-      return state.filter((book) => book.ID !== action.ID);
+      return state.filter(book => book.ID !== action.ID);
       // return [
       //   ...state.slice(0, action.ID), ...state.slice((action.ID + 1))
       // ];
-  
+
     default:
       return state;
   }

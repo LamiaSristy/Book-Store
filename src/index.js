@@ -1,13 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import reducer from './reducers/index';
+
+const initialState = [
+  {
+    ID: 1,
+    title: 'Title 1',
+    category: 'Cat-1',
+
+  },
+  {
+    ID: 2,
+    title: 'Title 1',
+    category: 'Cat-1',
+
+  },
+  {
+    ID: 3,
+    title: 'Title 1',
+    category: 'Cat-1',
+
+  },
+];
+
+const store = createStore(reducer, initialState);
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root'),
 );
 

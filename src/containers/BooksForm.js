@@ -43,7 +43,7 @@ const BookForm = ({ createBook }) => {
     },
   ];
 
-  const handleAddBook = () => {
+  const handleChange = () => {
     createBook({
       ID: Math.ceil(Math.random() * 100),
       title: bookTitleInput,
@@ -69,7 +69,7 @@ const BookForm = ({ createBook }) => {
           <option key={`${option.value}`} value={option.value}>{option.label}</option>
         ))}
       </select>
-      <button type="button" className="border-2" onClick={handleAddBook}>
+      <button type="button" onClick={handleChange}>
         Create Book
       </button>
     </form>

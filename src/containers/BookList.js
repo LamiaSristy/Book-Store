@@ -19,7 +19,6 @@ const mapStateToProp = (state) => ({books: state.bookReducer});
 const BookList = ({ books, removeBook }) => {
 
   const renderBook = (book) => <Book key={book.ID} book={book} removeBook={removeBook} />;
-
   return (
     <table>
       <thead>

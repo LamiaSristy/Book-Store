@@ -68,24 +68,17 @@ const BookForm = ({ createBook }) => {
     });
 
     setState(initState);
-    // setBookTitleInput('');
-    // setBookCategoryInput('');
   };
 
   return (
     <form>
       <label htmlFor="bookTitle">
-        title
+        Title
         <input type="text" name="title" name="bookTitleInput"
           value={state.bookTitleInput}
           onChange={handleChange} />
-        {/* <input type="text" name="title" value={bookTitleInput} onChange={e => setBookTitleInput(e.target.value)} /> */}
       </label>
 
-      {/* <select
-        value={bookCategoryInput}
-        onChange={e => setBookCategoryInput(e.target.value)}
-      > */}
       <select name="bookCategoryInput"
           value={state.bookCategoryInput}
           onChange={handleChange}

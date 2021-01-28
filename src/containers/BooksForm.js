@@ -17,31 +17,31 @@ const BookForm = ({ createBook }) => {
   const options = [
     {
       label: 'Action',
-      value: 'action',
+      value: 'Action',
     },
     {
       label: 'Biography',
-      value: 'biography',
+      value: 'Biography',
     },
     {
       label: 'History',
-      value: 'history',
+      value: 'History',
     },
     {
       label: 'Horror',
-      value: 'horror',
+      value: 'Horror',
     },
     {
       label: 'Kids',
-      value: 'kids',
+      value: 'Kids',
     },
     {
       label: 'Learning',
-      value: 'learning',
+      value: 'Learning',
     },
     {
       label: 'Sci-Fi',
-      value: 'sci-fi',
+      value: 'Sci-Fi',
     },
   ];
 

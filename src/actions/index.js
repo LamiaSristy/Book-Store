@@ -1,4 +1,3 @@
-/*eslint-disable*/
 export const CREATE_BOOK = 'CREATE_BOOK';
 export const REMOVE_BOOK = 'REMOVE_BOOK';
 export const CHANGE_FILTER = 'CHANGE_FILTER';
@@ -13,8 +12,7 @@ export const removeBook = ID => ({
   ID,
 });
 
-export const catFilter = filter => ({  
+export const catFilter = filter => ({
   type: CHANGE_FILTER,
   filter,
 });
-

@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import { REMOVE_BOOK, CREATE_BOOK } from '../actions/index';
 
 const books = [

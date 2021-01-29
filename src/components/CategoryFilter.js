@@ -1,13 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { catFilter } from '../actions/index';
-
-const mapDispatchToProps = dispatch => ({
-  catFilter: filter => {
-    dispatch(catFilter(filter));
-  },
-});
 
 const CategoryFilter = ({ catFilter }) => {
   const booksCategories = [
@@ -44,4 +37,4 @@ CategoryFilter.propTypes = {
   catFilter: PropTypes.func.isRequired,
 };
 
-export default connect(null, mapDispatchToProps)(CategoryFilter);
+export default connect(null, null)(CategoryFilter);

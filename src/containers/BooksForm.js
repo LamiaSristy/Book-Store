@@ -1,5 +1,4 @@
-/*eslint-disable */
-import React, { useState, SetStateAction, Component  } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
@@ -11,9 +10,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const BookForm = ({ createBook }) => {
-  const [bookTitleInput, setBookTitleInput] = useState('');
-  const [bookCategoryInput, setBookCategoryInput] = useState('');
-
   const options = [
     {
       label: 'Action',
@@ -47,18 +43,18 @@ const BookForm = ({ createBook }) => {
 
   const initState = {
     bookTitleInput: '',
-    bookCategoryInput: options[1].value
+    bookCategoryInput: '',
   };
 
-  const [state, setState] = React.useState(initState)
+  const [state, setState] = React.useState(initState);
 
-  const handleChange = (e) => {
-    const value = e.target.value;
+  const handleChange = e => {
+    const { value } = e.target;
     setState({
       ...state,
-      [e.target.name]: value
+      [e.target.name]: value,
     });
- }
+  };
 
   const handleSubmit = () => {
     createBook({
@@ -74,15 +70,22 @@ const BookForm = ({ createBook }) => {
     <form>
       <label htmlFor="bookTitle">
         Title
-        <input type="text" name="title" name="bookTitleInput"
+        <input
+          type="text"
+          name="bookTitleInput"
           value={state.bookTitleInput}
-          onChange={handleChange} />
+          onChange={handleChange}
+          required
+        />
       </label>
 
-      <select name="bookCategoryInput"
-          value={state.bookCategoryInput}
-          onChange={handleChange}
+      <select
+        name="bookCategoryInput"
+        value={state.bookCategoryInput}
+        onChange={handleChange}
+        required
       >
+        <option value="">None</option>
         {options.map(option => (
           <option key={`${option.value}`} value={option.value}>{option.label}</option>
         ))}

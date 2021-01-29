@@ -1,4 +1,5 @@
-import '../App.css';
+/*eslint-disable*/
+import '../stylesheets/App.css';
 import BookList from '../containers/BookList';
 import BookForm from '../containers/BooksForm';
 

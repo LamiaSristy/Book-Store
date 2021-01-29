@@ -1,6 +1,8 @@
+/*eslint-disable*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import '../stylesheets/filterstyles.css';
 
 const CategoryFilter = ({ catFilter }) => {
   const booksCategories = [
@@ -15,7 +17,7 @@ const CategoryFilter = ({ catFilter }) => {
   ];
 
   return (
-    <div>
+    <div className="filtercategory">
       <label htmlFor="book-category">
         Filter by Category
         <select

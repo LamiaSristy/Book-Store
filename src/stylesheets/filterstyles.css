@@ -1,0 +1,16 @@
+.filtercategory {
+  display: flex;
+  padding: 0 9em;
+  align-items: center;
+  background-color: #fff;
+  height: 65px;
+  }
+
+  /* .navbar {
+    display: flex;
+    padding: 0 9em;
+    align-items: center;
+    background-color: #fff;
+    height: 65px;
+  } */
+  

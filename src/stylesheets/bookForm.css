@@ -16,23 +16,23 @@ form {
   width: 174px;
   height: 24px;
   margin: 29px 524px 19px 0;
-  font-family: Montserrat;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.18px;
-  color: #888888;
+  color: #888;
 }
 
 .form-control {
-  height: 45px;  
+  height: 45px;
   margin-right: 10px;
-  padding: 10px;  
-  border-radius: 4px;  
-  border: solid 1px #e8e8e8;  
-  background-color: #ffffff;  
+  padding: 10px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
 }
 
 form input {
@@ -44,10 +44,10 @@ form select {
 }
 
 .btn-create {
-  background-color: var(--azure);;
-  border: solid 1px var(--azure);;  
+  background-color: var(--azure);
+  border: solid 1px var(--azure);
   border-radius: 4px;
-  color: #ffffff;
-  height: 45px; 
+  color: #fff;
+  height: 45px;
   width: 10%;
 }

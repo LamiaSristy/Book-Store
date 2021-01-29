@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
+import '../stylesheets/bookForm.css';
 
 const mapDispatchToProps = dispatch => ({
   createBook: book => {
@@ -68,19 +69,21 @@ const BookForm = ({ createBook }) => {
   };
 
   return (
+    <div className="book-form-container">
+      
+    <h2 className="book-form-heading">Add New Book</h2>
     <form>
-      <label htmlFor="bookTitle">
-        Title
         <input
+          className="form-control book-title"
           type="text"
           name="bookTitleInput"
           value={state.bookTitleInput}
           onChange={handleChange}
           required
         />
-      </label>
 
       <select
+        className="form-control book-category"
         name="bookCategoryInput"
         value={state.bookCategoryInput}
         onChange={handleChange}
@@ -91,10 +94,11 @@ const BookForm = ({ createBook }) => {
           <option key={`${option.value}`} value={option.value}>{option.label}</option>
         ))}
       </select>
-      <button type="button" onClick={handleSubmit}>
+      <button className="form-control btn btn-submit" type="button" onClick={handleSubmit}>
         Create Book
       </button>
     </form>
+    </div>
   );
 };
 

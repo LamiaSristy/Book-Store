@@ -17,10 +17,12 @@ const CategoryFilter = ({ catFilter }) => {
   ];
 
   return (
-    <div className="filtercategory">
-      <label htmlFor="book-category">
-        Filter by Category
-        <select
+    <div className="filtercategory">     
+      <label htmlFor="book-category" className="Filter-heading">
+        <h2 className="title">BookStore CMS</h2>
+        <p>Books</p>
+        <p>category</p>
+        <select className="book-cat"
           id="book-category"
           onChange={e => catFilter(e.target.value)}
         >
@@ -31,6 +33,10 @@ const CategoryFilter = ({ catFilter }) => {
           ))}
         </select>
       </label>
+      <div>
+        <i class="fas fa-user"></i>
+      </div>    
+      
     </div>
   );
 };

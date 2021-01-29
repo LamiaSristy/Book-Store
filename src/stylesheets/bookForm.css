@@ -1,52 +1,44 @@
 form {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .book-form-heading {
   width: 174px;
-
   height: 24px;
-
   margin: 29px 524px 19px 0;
-
   font-family: Montserrat;
-
   font-size: 20px;
-
   font-weight: bold;
-
   font-stretch: normal;
-
   font-style: normal;
-
   line-height: normal;
-
   letter-spacing: -0.18px;
-
   color: #888888;
 }
 
 .form-control {
-    height: 45px;
-  
-    margin: 19px 34px 0 0;
-  
-    padding: 13px 571px 13px 17px;
-  
-    border-radius: 4px;
-  
-    border: solid 1px #e8e8e8;
-  
-    background-color: #ffffff;
-  
+  height: 45px;  
+  margin-right: 10px;
+  padding: 10px;  
+  border-radius: 4px;  
+  border: solid 1px #e8e8e8;  
+  background-color: #ffffff;  
 }
 
-.book-title {
-  width: 664px;
+form input {
+  width: 500px;
 }
 
-.btn-submit {
-  width: 100px !important;
+form select {
+  width: 600px;
+}
+
+.btn-create {
+  background-color: var(--azure);;
+  border: solid 1px var(--azure);;  
+  border-radius: 4px;
+  color: #ffffff;
+  height: 45px; 
+  width: 100px;
 }

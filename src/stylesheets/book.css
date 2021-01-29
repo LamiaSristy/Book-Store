@@ -6,19 +6,21 @@
     width: 100%;
     border: solid 1px #e8e8e8;
     background-color: #fff;
+    border-radius: 5px;
   }
 
   .book-left {
+    margin-left: 100px;
     width: 40%;
   }
   
   .book-right {
     width: 40%;
-    padding-left: 70px;
   }
   
   .book-right > * {
     margin: 5px 0;
+    padding-left: 100px;
   }
   
   .book-category {
@@ -154,6 +156,7 @@
   }
   
   .update-btn {
+    margin-left: 100px;
     padding: 7px 19px 8px 22px;
     border-radius: 3px;
     background-color: var(--azure);

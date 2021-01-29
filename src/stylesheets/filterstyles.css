@@ -1,16 +1,25 @@
 .filtercategory {
   display: flex;
-  padding: 0 9em;
+  justify-content: space-between;
+  padding: 0 80px;
   align-items: center;
   background-color: #fff;
   height: 65px;
-  }
+  border-radius: 5px;
+}
 
-  /* .navbar {
-    display: flex;
-    padding: 0 9em;
-    align-items: center;
-    background-color: #fff;
-    height: 65px;
-  } */
+.Filter-heading {
+  width: 60%;
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.title {
+  color: var(--azure);;
+  font-size: larger;
+}
+
+.fa-user {
+  color: var(--azure);;
+}
   

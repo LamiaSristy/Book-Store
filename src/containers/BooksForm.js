@@ -94,7 +94,7 @@ const BookForm = ({ createBook }) => {
           <option key={`${option.value}`} value={option.value}>{option.label}</option>
         ))}
       </select>
-      <button className="form-control btn btn-submit" type="button" onClick={handleSubmit}>
+      <button className="btn-create" type="button" onClick={handleSubmit}>
         Create Book
       </button>
     </form>

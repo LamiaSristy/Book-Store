@@ -3,20 +3,20 @@ import { REMOVE_BOOK, CREATE_BOOK } from '../actions/index';
 const books = [
   {
     ID: 1,
-    title: 'Title 1',
-    category: 'Cat-1',
+    title: 'Book1',
+    category: 'Action',
 
   },
   {
     ID: 2,
-    title: 'Title 1',
-    category: 'Cat-1',
+    title: 'Book2',
+    category: 'Kids',
 
   },
   {
     ID: 3,
-    title: 'Title 1',
-    category: 'Cat-1',
+    title: 'Book3',
+    category: 'Sci-Fi',
 
   },
 ];

@@ -70,15 +70,16 @@ const BookForm = ({ createBook }) => {
 
   return (
     <div className="book-form-container">
-      
-    <h2 className="book-form-heading">Add New Book</h2>
-    <form>
+      <div className="wrapper inner-wrapper">
+        <h2 className="book-form-heading">Add New Book</h2>
+        <form>
         <input
           className="form-control book-title"
           type="text"
           name="bookTitleInput"
           value={state.bookTitleInput}
           onChange={handleChange}
+          placeholder="Book title"
           required
         />
 
@@ -98,6 +99,7 @@ const BookForm = ({ createBook }) => {
         Create Book
       </button>
     </form>
+      </div>
     </div>
   );
 };

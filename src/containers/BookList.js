@@ -39,7 +39,9 @@ const BookList = ({
   return (
     <div>
       <CategoryFilter catFilter={handleCategoryChange} />
-      <div>{filteredBooks.map(renderBook)}</div>
+      <div className="books-container">
+        {filteredBooks.map(renderBook)}
+      </div>
     </div>
   );
 };

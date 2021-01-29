@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import '../stylesheets/book.css';
 
 const Book = ({ book, removeBook }) => (
-  <div className="book-container">
+  <div className="book-container wrapper">
     <div className="book-left">
       <div className="book-category">{book.category}</div>
       <div className="book-title">{book.title}</div>

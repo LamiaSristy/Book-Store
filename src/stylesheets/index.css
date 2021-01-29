@@ -30,7 +30,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(216, 211, 211);
+  background-color: rgb(250, 249, 249);
 }
 
 code {
@@ -41,10 +41,4 @@ code {
     Consolas,
     'Courier New',
     monospace;
-}
-
-#root {
-  margin: 20px 100px 0 100px;
-  padding: 50px;
-  background-color: rgb(206, 204, 204);
 }

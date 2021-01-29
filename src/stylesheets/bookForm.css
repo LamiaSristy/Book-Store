@@ -1,6 +1,15 @@
+.book-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10em;
+}
+
 form {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .book-form-heading {
@@ -27,11 +36,11 @@ form {
 }
 
 form input {
-  width: 500px;
+  width: 60%;
 }
 
 form select {
-  width: 600px;
+  width: 30%;
 }
 
 .btn-create {
@@ -40,5 +49,5 @@ form select {
   border-radius: 4px;
   color: #ffffff;
   height: 45px; 
-  width: 100px;
+  width: 10%;
 }

@@ -1,25 +1,65 @@
 .filtercategory {
   display: flex;
-  justify-content: space-between;
-  padding: 0 80px;
+  justify-content: center;
   align-items: center;
   background-color: #fff;
-  height: 65px;
-  border-radius: 5px;
+  height: 100px;
+}
+
+.books {
+  width: 59px;
+  height: 30px;
+  margin: 18px 41px 11px 0;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  text-transform: uppercase;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  height: 16px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  text-transform: uppercase;
+}
+
+.categories-label {
+  padding-right: 1.5em;
+}
+
+.filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Filter-heading {
-  width: 60%;
+  width: 50%;
   display: flex; 
-  justify-content: space-between; 
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
-  color: var(--azure);;
-  font-size: larger;
+  color: var(--azure);
+  font-size: 2rem;
 }
 
 .fa-user {
-  color: var(--azure);;
+  color: var(--azure);
 }
   

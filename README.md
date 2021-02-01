@@ -22,7 +22,7 @@ This project is a demo website for a book store, developed using React. Here I h
 
 ## `Screen-shots:`
 
-Screenshot
+<img src="assets/img/book-store.png">
 
 # Getting Started:
 

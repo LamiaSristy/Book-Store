@@ -1,0 +1,53 @@
+.book-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10em;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-form-heading {
+  width: 174px;
+  height: 24px;
+  margin: 29px 524px 19px 0;
+  font-family: Montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.form-control {
+  height: 45px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+form input {
+  width: 60%;
+}
+
+form select {
+  width: 30%;
+}
+
+.btn-create {
+  background-color: var(--azure);
+  border: solid 1px var(--azure);
+  border-radius: 4px;
+  color: #fff;
+  height: 45px;
+  width: 10%;
+}

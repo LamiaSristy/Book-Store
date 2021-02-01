@@ -1,9 +1,11 @@
+/*eslint-disable*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 import { removeBook, catFilter } from '../actions/index';
+// import CategoryFilter  from '../components/CategoryFilter';
 
 const mapDispatchToProps = dispatch => ({
   removeBook: book => {
@@ -37,16 +39,9 @@ const BookList = ({
   return (
     <div>
       <CategoryFilter catFilter={handleCategoryChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>title </th>
-            <th>category</th>
-          </tr>
-        </thead>
-        <tbody>{filteredBooks.map(renderBook)}</tbody>
-      </table>
+      <div className="books-container">
+        {filteredBooks.map(renderBook)}
+      </div>
     </div>
   );
 };

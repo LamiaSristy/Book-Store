@@ -1,3 +1,4 @@
+/*eslint-disable*/
 const filterReducer = (state = 'All', action) => {
   switch (action.type) {
     case 'CHANGE_FILTER':

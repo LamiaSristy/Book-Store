@@ -4,19 +4,19 @@ import { REMOVE_BOOK, CREATE_BOOK } from '../actions/index';
 const books = [
   {
     ID: 1,
-    title: 'Book1',
-    category: 'Action',
+    title: 'Sapiens: A Brief History of Humankind',
+    category: 'History',
 
   },
   {
     ID: 2,
-    title: 'Book2',
+    title: 'The Cat in the Hat',
     category: 'Kids',
 
   },
   {
     ID: 3,
-    title: 'Book3',
+    title: 'A Journey to the Center of the Earth',
     category: 'Sci-Fi',
 
   },
